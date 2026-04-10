@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>异域同天 - 智能时代丝路文化交互平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义古典配色与字体配置 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+        body {
+            font-family: 'Noto Serif SC', serif; /* 衬线字体增加文化厚重感 */
+        }
+        .bg-hero {
+            /* 替换为实际的高清非遗/丝路背景图 */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544640808-32cb4f5dd30d?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-stone-900/90 backdrop-blur-sm text-stone-100 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="text-2xl font-bold tracking-widest text-amber-500">异域同天</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">首页</a>
+                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化百科</a>
+                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化故事汇</a>
+                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化圈</a>
+                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化之旅</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-sm hover:text-amber-500 transition">登录</button>
+                    <button class="bg-amber-600 hover:bg-amber-700 text-white text-sm px-4 py-2 rounded shadow transition">注册</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-hero h-screen flex items-center justify-center pt-16">
+        <div class="text-center px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-wide drop-shadow-lg">
+                山川异域，风月同天
+            </h1>
+            <p class="text-lg md:text-xl text-stone-200 mb-10 drop-shadow">
+                让东方匠心与西域风情同频共振，探索系统化非遗文化知识库
+            </p>
+            
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" placeholder="搜索刺绣、陶瓷、戏曲等非遗词条..." 
+                    class="w-full pl-5 pr-12 py-4 rounded-full text-stone-800 focus:outline-none focus:ring-4 focus:ring-amber-500/50 shadow-xl text-lg">
+                <button class="absolute right-2 top-2 p-2 bg-amber-600 hover:bg-amber-700 text-white rounded-full transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>
