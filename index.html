@@ -9,10 +9,10 @@
         /* 自定义古典配色与字体配置 */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
         body {
-            font-family: 'Noto Serif SC', serif; /* 衬线字体增加文化厚重感 */
+            font-family: 'Noto Serif SC', serif;
         }
         .bg-hero {
-            /* 替换为实际的高清非遗/丝路背景图 */
+            /* 首页高清背景图，增加了渐变暗化遮罩以凸显文字 */
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544640808-32cb4f5dd30d?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
@@ -28,8 +28,8 @@
                     <span class="text-2xl font-bold tracking-widest text-amber-500">异域同天</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">首页</a>
-                    <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化百科</a>
+                    <a href="#" class="text-amber-500 transition px-3 py-2 text-sm font-bold border-b-2 border-amber-500">首页</a>
+                    <a href="#encyclopedia" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化百科</a>
                     <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化故事汇</a>
                     <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化圈</a>
                     <a href="#" class="hover:text-amber-500 transition px-3 py-2 text-sm font-medium">文化之旅</a>
@@ -62,6 +62,60 @@
             </div>
         </div>
     </header>
+
+    <section id="encyclopedia" class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-800 mb-4">文化百科</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mb-4"></div>
+                <p class="text-stone-600">系统化非遗文化知识库，涵盖手工艺、戏曲、民俗等多元维度</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300 cursor-pointer">
+                    <div class="h-56 bg-stone-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&q=80" alt="苏绣" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-amber-600 text-white text-xs px-3 py-1 rounded-full shadow">传统手工艺</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">苏绣技艺</h3>
+                        <p class="text-stone-600 text-sm mb-4 line-clamp-3">苏绣，江苏省苏州市特产，中国国家地理标志产品。以其针法精细、色彩雅致而闻名于世，是东方美学的重要代表，传承千年匠心。</p>
+                        <span class="text-amber-600 font-medium group-hover:text-amber-700">探索谱系 &rarr;</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300 cursor-pointer">
+                    <div class="h-56 bg-stone-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80" alt="京剧" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-red-700 text-white text-xs px-3 py-1 rounded-full shadow">传统戏剧</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">京剧艺术</h3>
+                        <p class="text-stone-600 text-sm mb-4 line-clamp-3">中国影响最大的戏曲剧种，融合了唱、念、做、打等多种艺术形式，脸谱文化与华丽戏服展现了极致的舞台张力，被誉为国粹。</p>
+                        <span class="text-amber-600 font-medium group-hover:text-amber-700">观看视频 &rarr;</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300 cursor-pointer">
+                    <div class="h-56 bg-stone-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1615286595508-faec64e8e19c?auto=format&fit=crop&q=80" alt="景德镇陶瓷" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-teal-600 text-white text-xs px-3 py-1 rounded-full shadow">传统美术</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">青花瓷烧制技艺</h3>
+                        <p class="text-stone-600 text-sm mb-4 line-clamp-3">“白如玉，明如镜，薄如纸，声如磬”，景德镇传统瓷窑作坊营造技艺承载了千年的泥与火的交响，展现了极致的东方造物之美。</p>
+                        <span class="text-amber-600 font-medium group-hover:text-amber-700">3D 模型展示 &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full font-medium transition duration-300 shadow-sm hover:shadow-md">
+                    探索更多文化词条
+                </button>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
