@@ -3,149 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>异域同天 - 文化圈 (原生分离版)</title>
+    <title>异域同天 - 智能时代丝路文化交互平台</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="phone-mockup">
-    
-    <div id="tab-map" class="tab-content">
-        <div class="map-search">
-            <svg style="width:20px;height:20px;fill:none;stroke:#78716c;stroke-width:2;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            <input type="text" placeholder="探索附近的非遗工坊与同好...">
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">异域同天 <span>| 丝路文化平台</span></div>
+            <nav class="nav-links">
+                <a href="#encyclopedia" class="active">文化百科</a>
+                <a href="#stories">故事汇</a>
+                <a href="#community">文化圈 (GNN社交)</a>
+                <a href="#travel">文化之旅 (数据大屏)</a>
+            </nav>
+            <button class="login-btn">登录 / 注册</button>
         </div>
-        
-        <div class="poi-pin" style="top: 30%; left: 20%;">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar">
-            <div class="poi-label">苏小小·苏绣</div>
-        </div>
-        <div class="poi-pin" style="top: 50%; right: 20%; animation-delay: 0.5s;">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" style="border-color:#fff;" alt="Avatar">
-            <div class="poi-label">王大匠·竹编</div>
-        </div>
+    </header>
 
-        <div class="map-card">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                <h3 style="font-size:16px;">附近热点</h3>
-                <span style="font-size:10px; color:var(--primary-dark); background:var(--primary-light); padding:2px 8px; border-radius:10px;">距您 1.2km</span>
-            </div>
-            <p style="font-size:12px; color:var(--text-muted);">江南丝竹非遗音乐工坊，今日有传承人现场教学演出。</p>
-            <button class="map-card-btn">立即预约体验</button>
-        </div>
-    </div>
-
-    <div id="tab-radar" class="tab-content active" style="background: #fff;">
-        <div class="header">
-            <div class="header-title">智能匹配</div>
-        </div>
-        <div class="radar-card">
-            <div class="radar-glow"></div>
-            <div class="user-info">
-                <div style="display:flex; gap:12px; align-items:center;">
-                    <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar">
-                    <div>
-                        <div style="font-weight:bold; font-size:16px;">苏小小 <span class="tag-mbti">INFP</span></div>
-                        <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">深度契合 · 偏好相似</div>
+    <section id="encyclopedia" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">文化百科 <span>Systematic Knowledge Base</span></h2>
+            <p class="section-desc">系统化非遗文化知识库，涵盖手工、戏曲、民俗等多元维度。</p>
+            <div class="grid grid-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?auto=format&fit=crop&w=400&q=80" alt="苏绣">
+                    <div class="card-content">
+                        <span class="tag">传统手工艺</span>
+                        <h3>苏绣技艺</h3>
+                        <p>以针作画，以线达意，传承千年的指尖美学。</p>
                     </div>
                 </div>
-                <div class="match-score">
-                    <div class="match-num">95%</div>
-                    <div style="font-size:10px; color:var(--text-muted);">算法契合度</div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80" alt="京剧">
+                    <div class="card-content">
+                        <span class="tag tag-red">传统戏剧</span>
+                        <h3>京剧艺术</h3>
+                        <p>融唱念做打于一体，国粹经典，粉墨春秋。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1615286595508-faec64e8e19c?auto=format&fit=crop&w=400&q=80" alt="陶瓷">
+                    <div class="card-content">
+                        <span class="tag tag-teal">传统美术</span>
+                        <h3>景德镇青花瓷</h3>
+                        <p>白如玉，明如镜，薄如纸，声如磬。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=400&q=80" alt="茶艺">
+                    <div class="card-content">
+                        <span class="tag tag-green">民俗文化</span>
+                        <h3>中国传统茶艺</h3>
+                        <p>融汇礼仪与哲学的茶道精神，品茗论道。</p>
+                    </div>
                 </div>
             </div>
-            
-            <canvas id="radarCanvas" width="310" height="240" style="margin: 10px auto; display: block; position: relative; z-index: 1;"></canvas>
-            
-            <div class="btn-group">
-                <button class="btn-outline">跳过</button>
-                <button class="btn-solid">打招呼</button>
-            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="tab-chat" class="tab-content" style="background: #fff;">
-        <div class="header">
-            <div class="header-title">消息</div>
-        </div>
-        <div class="chat-list">
-            <div class="chat-item">
-                <div class="chat-avatar" style="background:var(--primary-light); display:flex; justify-content:center; align-items:center;">
-                    <svg style="width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:2;" viewBox="0 0 24 24"><path d="M15 17h5l-1.4-1.4A2 2 0 0118 14.1V11a6 6 0 00-4-5.6V5a2 2 0 10-4 0v.3C7.6 6.1 6 8.3 6 11v3.1c0 .5-.2 1-.6 1.4L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+    <section id="stories" class="section">
+        <div class="container">
+            <h2 class="section-title">文化故事汇 <span>Cultural Stories</span></h2>
+            <p class="section-desc">让非遗活在故事里，通过图文与短视频实现多模态情感共鸣。</p>
+            <div class="story-layout">
+                <div class="story-main" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('https://images.unsplash.com/photo-1544640808-32cb4f5dd30d?auto=format&fit=crop&w=800&q=80');">
+                    <div class="story-info">
+                        <h3>《我在故宫修文物》背后的匠心传承</h3>
+                        <p>探寻古老技艺在现代的坚守与创新...</p>
+                    </div>
                 </div>
-                <div class="chat-content">
-                    <div class="chat-header"><span class="chat-name">系统通知</span><span class="chat-time">10:42</span></div>
-                    <div class="chat-msg">您预约的景德镇陶瓷展即将开始...</div>
-                </div>
-            </div>
-            <div class="chat-item">
-                <div class="chat-avatar">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="Avatar">
-                    <div class="badge"></div>
-                </div>
-                <div class="chat-content">
-                    <div class="chat-header"><span class="chat-name">苏小小</span><span class="chat-time">昨天</span></div>
-                    <div class="chat-msg">上次你说的那个平针法，能发个图吗？</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="tab-feed" class="tab-content">
-        <div class="header" style="position: sticky; top: 0;">
-            <div class="header-title">非遗圈</div>
-        </div>
-        <div class="feed-list">
-            <div class="feed-card">
-                <div class="feed-header">
-                    <div class="feed-user">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Avatar">
-                        <div>
-                            <div style="font-weight:bold; font-size:14px;">南风知我意</div>
-                            <div style="font-size:10px; color:var(--text-muted);">2小时前</div>
+                <div class="story-list">
+                    <div class="story-item">
+                        <div class="story-img" style="background: #e7e5e4;"></div>
+                        <div class="story-text">
+                            <h4>皮影戏：光影交错间的人间悲欢</h4>
+                            <span>2026-04-12 · 深度阅读</span>
                         </div>
                     </div>
-                    <button class="feed-follow">关注</button>
-                </div>
-                <div class="feed-text">今天在工坊体验了点翠技艺的替代工艺，虽然用的不是翠鸟羽毛，但依然能感受到那份极致的东方华丽。✨ #非遗手作</div>
-                <img class="feed-img" src="https://images.unsplash.com/photo-1544640808-32cb4f5dd30d?auto=format&fit=crop&w=800&q=80" alt="Post Image">
-                <div class="feed-actions">
-                    <div class="action-btn">
-                        <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;" viewBox="0 0 24 24"><path d="M14 10h4.7a2 2 0 011.7 2.8l-3.5 7A2 2 0 0115.2 21H11.2c-.1 0-.3 0-.4-.1L7 20m7-10V5a2 2 0 00-2-2h-.1c-.5 0-.9.4-.9.9 0 .7-.2 1.4-.6 2L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg> 128
+                    <div class="story-item">
+                        <div class="story-img" style="background: #d6e4df;"></div>
+                        <div class="story-text">
+                            <h4>一把油纸伞的三十六道工序</h4>
+                            <span>2026-04-10 · 匠人访谈</span>
+                        </div>
                     </div>
-                    <div class="action-btn">
-                        <svg style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.4-4 8-9 8a9.8 9.8 0 01-4.2-.9L3 20l1.3-3.7C3.5 15 3 13.5 3 12c0-4.4 4-8 9-8s9 3.5 9 8z"/></svg> 32
+                    <div class="story-item">
+                        <div class="story-img" style="background: #fef3c7;"></div>
+                        <div class="story-text">
+                            <h4>古琴斫制：劈开木石听见时间的声音</h4>
+                            <span>2026-04-08 · 纪录片展映</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="community" class="section bg-dark text-white">
+        <div class="container">
+            <h2 class="section-title" style="color:#fff;">文化圈：中国文化社交社区 <span>Intelligent Social Graph</span></h2>
+            <p class="section-desc" style="color:#a8a29e;">【创新点一】基于 GNN (图神经网络) 算法，实时解析你的兴趣基因，构建专属非遗社交图谱。</p>
+            
+            <div class="grid grid-2" style="align-items: center;">
+                <div class="community-text">
+                    <div class="feature-box">
+                        <h3>📍 寻根问源，结识同好</h3>
+                        <p>不再是枯燥的论坛发帖，系统通过多维度性格与兴趣测试，为你精准匹配文化知音。</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>🔗 图谱推演，智能裂变</h3>
+                        <p>右侧为你与平台的实时关系推演。节点距离越近，代表算法计算出的余弦相似度越高。</p>
+                    </div>
+                    <button class="primary-btn mt-2">一键生成我的图谱</button>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="gnnCanvas" width="500" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="travel" class="section">
+        <div class="container">
+            <h2 class="section-title">文化之旅 <span>Customized Tourism & Data Vis</span></h2>
+            <p class="section-desc">【创新点三】动态可交互的数据与旅游可视化大屏，一站式定制你的非遗体验路线。</p>
+            
+            <div class="data-dashboard">
+                <div class="dashboard-sidebar">
+                    <h3>全国非遗热度数据监控</h3>
+                    <div class="chart-container" id="barChart">
+                        </div>
+                </div>
+                <div class="dashboard-main map-bg">
+                    <div class="map-overlay">
+                        <h3>定制路线：江南丝竹与苏绣体验游</h3>
+                        <p>途径：南京 -> 苏州 -> 杭州</p>
+                        <div class="route-timeline">
+                            <div class="point">南京博物院</div>
+                            <div class="line"></div>
+                            <div class="point active">镇湖刺绣艺术馆</div>
+                            <div class="line"></div>
+                            <div class="point">西湖非遗集市</div>
+                        </div>
+                        <button class="primary-btn mt-2" style="width: 100%;">生成专属行程</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="ai-widget" class="ai-widget">
+        <div class="ai-header" onclick="toggleChat()">
+            <span>✨ 异域同天 AI 大模型</span>
+            <span class="ai-toggle">▲</span>
+        </div>
+        <div class="ai-body" id="aiBody">
+            <div class="ai-msgs" id="aiMsgs">
+                <div class="msg ai">您好！我是基于非遗垂直领域知识库微调的 AI 助手。请问想了解哪项技艺的渊源？</div>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="aiInput" placeholder="例如：解释一下什么是花丝镶嵌...">
+                <button onclick="sendMsg()">发送</button>
+            </div>
+        </div>
     </div>
 
-    <div class="ai-fab">
-        <svg style="width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-    </div>
-
-    <div class="bottom-nav">
-        <div class="nav-item" onclick="switchTab('map')">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.6 16.6L13.4 20.9a2 2 0 01-2.8 0l-4.2-4.2a8 8 0 1111.3 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            地图找人
-        </div>
-        <div class="nav-item active" onclick="switchTab('radar')">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
-            算法雷达
-        </div>
-        <div class="nav-item" onclick="switchTab('chat')">
-            <div class="badge"></div>
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.4-4 8-9 8a9.8 9.8 0 01-4.2-.9L3 20l1.3-3.7C3.5 15 3 13.5 3 12c0-4.4 4-8 9-8s9 3.5 9 8z"/></svg>
-            消息
-        </div>
-        <div class="nav-item" onclick="switchTab('feed')">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-2-2h-2"/></svg>
-            非遗圈
-        </div>
-    </div>
-</div>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
