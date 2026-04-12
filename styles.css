@@ -1,0 +1,140 @@
+/* ================= 基础全局样式 ================= */
+:root {
+    --primary: #d97706; /* 主色调：琥珀色 */
+    --primary-light: #fef3c7;
+    --primary-dark: #b45309;
+    --bg-body: #e7e5e4;
+    --bg-app: #fafaf9;
+    --text-main: #292524;
+    --text-muted: #78716c;
+    --border: #e7e5e4;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    background-color: var(--bg-body); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+ul { list-style: none; }
+button { border: none; cursor: pointer; outline: none; background: none; }
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar { display: none; }
+
+/* ================= 手机外壳与布局 ================= */
+.phone-mockup {
+    width: 390px;
+    height: 844px;
+    background: var(--bg-app);
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 8px solid #292524;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header { 
+    padding: 40px 16px 12px; 
+    background: #fff; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid var(--border); 
+    z-index: 10; 
+}
+.header-title { font-size: 18px; font-weight: bold; color: var(--text-main); }
+
+.tab-content { flex: 1; overflow-y: auto; display: none; position: relative; }
+.tab-content.active { display: block; }
+
+/* ================= 导航栏 ================= */
+.bottom-nav {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 50;
+}
+.nav-item { 
+    display: flex; flex-direction: column; align-items: center; 
+    color: var(--text-muted); cursor: pointer; 
+    font-size: 10px; font-weight: bold; position: relative; 
+}
+.nav-item svg { width: 24px; height: 24px; margin-bottom: 2px; }
+.nav-item.active { color: var(--primary); }
+.badge { 
+    position: absolute; top: 0; right: 2px; 
+    width: 8px; height: 8px; background: #ef4444; border-radius: 50%; 
+}
+
+/* ================= 模块 1：地图交友 ================= */
+#tab-map { background: #d6e4df; }
+.map-search { 
+    position: absolute; top: 20px; left: 16px; right: 16px; 
+    background: #fff; border-radius: 20px; padding: 12px 16px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; align-items: center; 
+}
+.map-search input { border: none; outline: none; margin-left: 8px; flex: 1; font-size: 14px; }
+.poi-pin { position: absolute; text-align: center; animation: bounce 2s infinite; }
+.poi-pin img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.poi-label { background: #fff; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; margin-top: -8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.map-card { position: absolute; bottom: 20px; left: 16px; right: 16px; background: #fff; border-radius: 16px; padding: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+.map-card-btn { background: var(--text-main); color: #fff; width: 100%; padding: 10px; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+
+/* ================= 模块 2：兴趣雷达 ================= */
+.radar-card { background: #fff; margin: 16px; border-radius: 16px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
+.radar-glow { position: absolute; top: -40px; right: -40px; width: 150px; height: 150px; background: var(--primary-light); border-radius: 50%; filter: blur(40px); }
+.user-info { display: flex; justify-content: space-between; position: relative; z-index: 1; margin-bottom: 16px; }
+.avatar { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--primary); object-fit: cover; }
+.tag-mbti { font-size: 10px; background: #dbeafe; color: #2563eb; padding: 2px 6px; border-radius: 4px; vertical-align: middle; margin-left: 4px; }
+.match-score { text-align: right; }
+.match-num { font-size: 24px; font-weight: 900; color: var(--primary); }
+.btn-group { display: flex; gap: 12px; margin-top: 20px; position: relative; z-index: 1; }
+.btn-outline { flex: 1; background: #f5f5f4; color: var(--text-main); padding: 12px; border-radius: 12px; font-weight: bold; }
+.btn-solid { flex: 1; background: var(--primary); color: #fff; padding: 12px; border-radius: 12px; font-weight: bold; box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3); }
+
+/* ================= 模块 3：即时通讯 ================= */
+.chat-list { padding: 8px; }
+.chat-item { display: flex; align-items: center; padding: 12px; gap: 12px; }
+.chat-avatar { width: 48px; height: 48px; border-radius: 50%; background: #eee; position: relative; }
+.chat-content { flex: 1; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+.chat-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.chat-name { font-weight: bold; font-size: 14px; }
+.chat-time { font-size: 12px; color: var(--text-muted); }
+.chat-msg { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px; }
+
+/* ================= 模块 4：非遗圈动态 ================= */
+.feed-list { padding: 16px; background: var(--bg-body); min-height: 100%; }
+.feed-card { background: #fff; border-radius: 16px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.feed-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.feed-user { display: flex; align-items: center; gap: 8px; }
+.feed-user img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.feed-follow { background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.feed-text { font-size: 14px; color: var(--text-main); line-height: 1.5; margin-bottom: 12px; }
+.feed-img { width: 100%; height: 180px; border-radius: 12px; background: #ccc; object-fit: cover; margin-bottom: 12px; }
+.feed-actions { display: flex; gap: 24px; font-size: 12px; color: var(--text-muted); }
+.action-btn { display: flex; align-items: center; gap: 4px; }
+
+/* ================= AI 悬浮按钮 ================= */
+.ai-fab { 
+    position: absolute; bottom: 90px; right: 16px; 
+    width: 50px; height: 50px; background: var(--text-main); color: var(--primary); 
+    border-radius: 50%; display: flex; justify-content: center; align-items: center; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 2px solid #57534e; 
+    z-index: 100; cursor: pointer; 
+}
+
+/* 简单动画 */
+@keyframes bounce { 
+    0%, 100% { transform: translateY(-5%); } 
+    50% { transform: translateY(0); } 
+}
